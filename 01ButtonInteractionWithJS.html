@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Button Interaction With JavaScript</title>
+
+	<!-- bootstrap for custom styling -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<style type="text/css">
+		body{
+			padding: 30px;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<h1>🔥🔥🔥🔥 This is default text 🔥🔥🔥🔥</h1>
+
+		<!-- use button to control change the text -->
+
+		<button type="button" class="btn btn-primary" onclick="changeText()">
+			change the Text
+		</button>
+
+	</div>
+
+	<!-- 🔥🔥🔥🔥🔥🔥 java Script starts here 🔥🔥🔥🔥🔥🔥 -->
+
+	<script type="text/javascript">
+		const header = document.querySelector('h1');
+
+		function changeText(){
+			header.innerText = '🍀🍀🍀🍀 This is edited text 🍀🍀🍀🍀'
+		}
+			
+	</script>
+
+
+</body>
+</html>
