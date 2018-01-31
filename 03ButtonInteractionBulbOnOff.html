@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Button Interaction With JavaScript</title>
+
+	<!-- bootstrap for custom styling -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<style type="text/css">
+		body{
+			padding: 30px;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div class="jumbotron text-center">
+		
+		<h2>What Can JavaScript Do?</h2>
+
+		<p>JavaScript can change HTML attributes.</p>
+
+		<p>In this case JavaScript changes the src (source) attribute of an image.</p>
+
+		<button
+		type="button" id="button01" class='btn btn-primary' onclick="button01Click()">Turn on the light</button>
+
+		<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+		<button
+		type="button" id="button02" class='btn btn-primary' onclick="button02Click()">Turn off the light</button>
+
+	</div>
+
+
+<script>
+
+function button01Click() {
+	document.getElementById('button01').disabled = true;
+    document.getElementById('button02').disabled = false;
+    document.getElementById('myImage').src='pic_bulbon.gif';
+    
+}
+function button02Click(){
+    document.getElementById('button02').disabled = true;
+	document.getElementById('button01').disabled = false;
+    document.getElementById('myImage').src='pic_bulboff.gif';
+}
+
+</script>
+
+</body>
+</html>
