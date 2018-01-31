@@ -21,8 +21,12 @@
 
 		<!-- use button to control change the text -->
 
-		<button type="button" class="btn btn-primary" onclick="changeText()">
+		<button type="button" id="button01" class="btn btn-primary" onclick="onButton01Click()">
 			change the Text
+		</button>
+
+		<button type="button" id="button02" class="btn btn-primary" onclick="onButton02Click()">
+			get default Text
 		</button>
 
 	</div>
@@ -34,6 +38,25 @@
 
 		function changeText(){
 			header.innerText = '🍀🍀🍀🍀 This is edited text 🍀🍀🍀🍀'
+
+		}
+
+		function defaultText(){
+			header.innerText = '🔥🔥🔥🔥 This is default text 🔥🔥🔥🔥'
+
+		}
+
+
+		function onButton01Click() {
+			document.getElementById('button01').disabled = true;
+		    document.getElementById('button02').disabled = false;
+		    changeText();    
+		}
+
+		function onButton02Click(){
+		    document.getElementById('button02').disabled = true;
+			document.getElementById('button01').disabled = false;
+		  	defaultText();
 		}
 			
 	</script>
